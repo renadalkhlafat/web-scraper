@@ -19,7 +19,8 @@ def get_citations_needed_report(url):
     for result in results:
         citation.append(result.parent.parent.parent.text)
 
-    return citation
+    final = '\n'.join(citation)
+    return final
 
 # print(get_citations_needed_count(wikipedia_url))
-# print(get_citations_needed_report(wikipedia_url))
+print(get_citations_needed_report(wikipedia_url))
